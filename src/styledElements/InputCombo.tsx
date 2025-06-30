@@ -3,7 +3,7 @@ import styled from 'styled-components';
 interface inputProps {
   inputLabel: string;
   inputName: string;
-  inputType: 'text' | 'textarea';
+  inputType: 'email' | 'text' | 'textarea';
 }
 
 const InputWrapper = styled.div`
@@ -52,9 +52,9 @@ const InputCombo = ({ inputLabel, inputName, inputType = 'text' }: inputProps) =
     <InputWrapper>
       <StyledLabel htmlFor={inputName}>{inputLabel}</StyledLabel>
       {inputType === 'textarea' ? (
-        <StyledTextarea id={inputName} name={inputName} rows={4} required/>
+        <StyledTextarea id={inputName} name={inputName} rows={4} required />
       ) : (
-        <StyledInput type={inputType} id={inputName} name={inputName} required/>
+        <StyledInput type={inputType} id={inputName} name={inputName} required />
       )}
     </InputWrapper>
   );

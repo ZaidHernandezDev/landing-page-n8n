@@ -12,7 +12,7 @@ interface CardProps {
 
 const CardTemplate = ({ title, text, img, altText }: CardProps) => {
   return (
-    <Card>
+    <Card sx={{minHeight: '350px'}}>
       <CardMedia component="img" height="140" image={img} alt={altText} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
