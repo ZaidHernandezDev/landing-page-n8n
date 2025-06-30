@@ -30,7 +30,6 @@ Agregar página en github pages al finalizar el proyecto
 /src
 /assets # Imágenes, íconos, logo
 /components # Componentes reutilizables (Navbar, Footer, Hero, etc.)
-/pages # Página principal (LandingPage.jsx)
 App.jsx
 main.jsx
 vite.config.js
