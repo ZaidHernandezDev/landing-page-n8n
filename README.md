@@ -49,3 +49,8 @@ npm install
 # Iniciar servidor de desarrollo
 npm run dev
 ```
+
+## 📌 Autor
+**Zaid Alberto Ramírez Hernández**
+
+Estudiante de Ciencias de la Informática — UPIICSA

@@ -1,3 +1,5 @@
+import cardsData from '../exampleData/cardsData';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { FaArrowLeft } from 'react-icons/fa';
@@ -5,38 +7,47 @@ import { FaArrowRight } from 'react-icons/fa';
 
 import CardTemplate from '../styledElements/CardTemplate';
 import SectionTitle from '../styledElements/SectionTitle';
+import styled from 'styled-components';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const cardsData = [
-  {
-    title: 'Automatización a medida',
-    text: 'Diseñamos flujos personalizados con n8n que se adaptan perfectamente a los procesos de tu empresa, optimizando tiempos y reduciendo errores.',
-  },
-  {
-    title: 'Integración de servicios',
-    text: 'Conectamos tus herramientas favoritas (Gmail, Slack, Google Sheets, APIs, CRMs, ERPs) para que trabajen en armonía sin intervención manual.',
-  },
-  {
-    title: 'Capacitación y soporte',
-    text: 'Te capacitamos para que puedas dominar n8n desde cero. Además, ofrecemos soporte técnico para mantener tus flujos funcionando sin interrupciones.',
-  },
-  {
-    title: 'Instalación en tu infraestructura',
-    text: 'Te ayudamos a instalar y configurar n8n en tus propios servidores o en la nube, garantizando seguridad, autonomía y control total.',
-  },
-  {
-    title: 'Monitoreo y mantenimiento',
-    text: 'Implementamos monitoreo en tiempo real para detectar fallos y mantener tus automatizaciones funcionando 24/7 sin que tengas que preocuparte.',
-  },
-];
+const SwiperContainer = styled.div`
+  max-width: 70vw;
+  position: relative;
+  margin-top: 5rem;
+  padding: 0 50px; /* Espacio para las flechas */
+`;
+
+const Left = styled(FaArrowLeft)`
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+`;
+
+const Right = styled(FaArrowRight)`
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+`
 
 const Services = ({}) => {
   return (
-    <div>
+    <div id="servicios">
       <SectionTitle title="¿Qué ofrecemos?" subtitle="Consultoría especializada en automatización con n8n" />
-      <div style={{ padding: '20px', position: 'relative' }}>
+      <SwiperContainer>
         <Swiper
           modules={[Navigation]}
           navigation={{
@@ -45,7 +56,7 @@ const Services = ({}) => {
           }}
           loop={true}
           slidesPerView={3}
-          spaceBetween={30}
+          spaceBetween={10}
           breakpoints={{
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
@@ -54,14 +65,14 @@ const Services = ({}) => {
         >
           {cardsData.map((card, index) => (
             <SwiperSlide key={index}>
-              <CardTemplate title={card.title} text={card.text} />
+              <CardTemplate title={card.title} text={card.text} img={card.img} altText={card.alt} />
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <FaArrowLeft className="swiper-button-prev"></FaArrowLeft>
-        <FaArrowRight className="swiper-button-next"></FaArrowRight>
-      </div>
+        <Left className="swiper-button-prev"></Left>
+        <Right className="swiper-button-next"></Right>
+      </SwiperContainer>
     </div>
   );
 };

@@ -15,7 +15,22 @@ const MainContainer = styled.div`
 `;
 
 const Content = styled.div`
-  flex: 1;
+
+  & > div {
+    padding-top: 5rem;
+    height: calc(100vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  & hr {
+    border: none;
+    height: 2px;
+    background-color: #7e22ce;
+  }
 `;
 
 const App = () => {
@@ -24,7 +39,9 @@ const App = () => {
       <Header />
       <Content>
         <MainSection />
+        <hr />
         <Services />
+        <hr />
         <ContactForm />
       </Content>
       <Footer />
