@@ -4,7 +4,7 @@ Landing page ficticia desarrollada como parte de un proyecto corto, cuyo objetiv
 
 ## 🌐 Demo
 
-Agregar página en github pages al finalizar el proyecto
+[Página en servidor](https://zaidhernandezdev.github.io/landing-page-n8n/)
 
 ## 🧩 Características
 
