@@ -73,22 +73,22 @@ export default function Footer() {
           <h5>Redes sociales</h5>
           <IconList>
             <IconLi>
-              <motion.a href="/" whileHover={{ scale: 1.2, color: '#1877f2' }}>
+              <motion.a href="https://www.facebook.com/" whileHover={{ scale: 1.2, color: '#1877f2' }}>
                 <FaFacebook />
               </motion.a>
             </IconLi>
             <IconLi>
-              <motion.a href="/" whileHover={{ scale: 1.2, color: '#E1306C' }}>
+              <motion.a href="https://www.instagram.com/" whileHover={{ scale: 1.2, color: '#E1306C' }}>
                 <FaInstagram />
               </motion.a>
             </IconLi>
             <IconLi>
-              <motion.a href="/" whileHover={{ scale: 1.2 }}>
+              <motion.a href="https://x.com/" whileHover={{ scale: 1.2 }}>
                 <FaSquareXTwitter />
               </motion.a>
             </IconLi>
             <IconLi>
-              <motion.a href="/" whileHover={{ scale: 1.2, color: '#c4302b' }}>
+              <motion.a href="https://www.youtube.com/" whileHover={{ scale: 1.2, color: '#c4302b' }}>
                 <FaYoutube />
               </motion.a>
             </IconLi>
